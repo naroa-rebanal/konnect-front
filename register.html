@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konnect. | Registro</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="./assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+<div class="logo-container">
+    <img src="./assets/img/konnect-logo.svg" class="logo" alt="konnect-logo"/></div>
+        
+        <nav>
+            <ul class="main-menu">
+                <li class="menu-item actividades"><span class="menu-title">Actividades</span></li>
+                <li class="menu-item planes"><span class="menu-title">Mis planes</span></li>
+                <li class="menu-item cuenta"><span class="menu-title">Mi cuenta</span></li>
+                <li class="menu-item menu-btn new-activity"><span class="menu-title">Crear actividad</span></li>
+                <li class="menu-item menu-btn login"><span class="menu-title">Login</span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wrapper">
+            <section class="page-heading">
+                <h1>Registro.</h1>
+                <p class="page-subtitle">¿A qué esperas para unirte a Konnect?</p>
+            </section>
+        
+            <section class="form register-form">
+                <form>
+                    <article class="register-group" id="group-1">
+                        <p class="fieldgroup-title">
+                            ¡Empecemos!</p>
+                        <div class="formfield">
+                            <label>Elige un nombre de usuario
+                                <span class="extra-info">Será el nombre por el que te conocerán el resto de usuarios</span></label>
+                            <input type="text">
+                        </div>
+                        <div class="formfield">
+                            <label>Introduce tu email</label>
+                            <input type="email">
+                        </div>
+                        <div class="formfield">
+                            <label>Elige una contraseña</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-controls">
+                            <img class="step-btn" name="next" src="./assets/img/next.svg"/>
+                        </div>
+                    </article>
+
+                    <article class="register-group" id="group-2">
+                        <p class="fieldgroup-title">
+                            Cuentanos un poco más sobre ti</p>
+                            <div class="formfield">
+                                <label>Tu nombre</label>
+                                <input type="text">
+                            </div>
+                        <div class="formfield">
+                            <label>¿Cual es tu fecha de nacimiento?</label>
+                            <input type="date">
+                        </div>
+                        <div class="formfield genero-container">
+                            <label>¿Con qué género te identificas?</label>
+                            <div><div><input type="radio" name="genero" id="Mujer" value="Mujer"><span>Mujer</span></div>
+                            <div><input type="radio" name="genero" id="Hombre" value="Hombre"><span>Hombre</span></div>
+                            <div><input type="radio" name="genero" id="Otro" value="Otro"><span>Otro</span></div>
+                            </div>
+                        </div>
+                        <div class="formfield">
+                            <label>Selecciona dónde te encuentras
+                                <span class="extra-info">Así podrás conectar con gente que esté cerca de tí.</span></label>
+                            <div class="select-wrapper">
+                                <select class="combo-pronvincia">
+                                <option value="Albacete">Albacete</option>
+                                <option value="Alicante">Alicante</option>
+                                <option value="Almeria">Almeria</option>
+                                <option value="Asturias">Asturias</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="form-controls">
+                            <img class="step-btn" name="prev" src="./assets/img/prev.svg"/>
+                            <img class="step-btn" name="next" src="./assets/img/next.svg"/>
+                        </div>
+                    </article>
+
+                    <article class="register-group" id="group-3">
+                <p class="fieldgroup-title">
+               Es hora de que te presentes</p>
+                        <div class="formfield">
+                            <label>Escribe una pequeña bio para que otros usuarios puedan leerla</label>
+                            <textarea rows="5"></textarea>
+                        </div>
+                        <div class="form-controls">
+                            <img class="step-btn" name="prev" src="./assets/img/prev.svg"/>
+                        </div>
+                        <input type="submit" class="submit-btn" value="Registrate">
+                    
+                    </article>
+                </form>
+           </section>
+    
+       
+
+    </main>
+
+</body>
+</html>

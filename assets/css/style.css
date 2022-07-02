@@ -1,0 +1,285 @@
+/*IMPORTS*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*VARIABLES*/
+/*Colores*/
+/*Tipografias*/
+/*Efectos*/
+/*GENERAL*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Raleway";
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/*HEADER*/
+header {
+  /*Desktop - default*/
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  z-index: 80000;
+  /*Responsive */
+}
+header .logo-container {
+  display: flex;
+}
+header img.logo {
+  max-width: 200px;
+}
+header .main-menu {
+  list-style: none;
+  display: flex;
+  column-gap: 2.5rem;
+  align-items: center;
+  font-family: "Dosis";
+}
+header .main-menu .new-activity {
+  background-color: rgba(97, 209, 217, 0.3019607843);
+}
+header .main-menu li .menu-title {
+  font-size: 1.2rem;
+}
+header .main-menu li.login {
+  background-color: black;
+  color: white;
+}
+header .main-menu li.menu-btn {
+  padding: 3px 15px;
+  border-radius: 25px;
+}
+@media (max-width: 1030px) {
+  header {
+    padding: 0 1rem;
+  }
+  header img.logo {
+    max-width: 145px;
+  }
+  header .main-menu {
+    list-style: none;
+    display: flex;
+    column-gap: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    left: 0;
+  }
+  header .logo-container {
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 0 0px 6px 4px rgba(0, 0, 0, 0.1254901961);
+  }
+  header .main-menu {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 13px 0;
+    justify-content: space-around;
+    margin-bottom: 0;
+    box-shadow: 0 0px 6px 4px rgba(0, 0, 0, 0.1254901961);
+  }
+}
+
+main.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+  /*FORMS*/
+}
+main.wrapper .page-heading {
+  font-family: "Dosis";
+}
+main.wrapper .page-heading h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 500;
+  text-align: center;
+  color: #61d1d9;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+main.wrapper .page-heading .page-subtitle {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;
+}
+main.wrapper .form * {
+  font-family: "Raleway";
+}
+main.wrapper .form textarea, main.wrapper .form input[type=email], main.wrapper .form input[type=password], main.wrapper .form input[type=text], main.wrapper .form input[type=date] {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e8f2f3;
+  font-size: 1.2rem;
+}
+main.wrapper .form textarea:focus-visible, main.wrapper .form input[type=email]:focus-visible, main.wrapper .form input[type=password]:focus-visible, main.wrapper .form input[type=text]:focus-visible, main.wrapper .form input[type=date]:focus-visible {
+  outline-color: #d4eef0;
+}
+main.wrapper .form .select-wrapper {
+  position: relative;
+}
+main.wrapper .form .select-wrapper:after {
+  content: "";
+  background-image: url(../img/down.svg);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 30%;
+}
+main.wrapper .form select {
+  appearance: none;
+  background-color: #e8f2f3;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  padding: 8px 20px;
+  margin: 0;
+  width: 100%;
+}
+main.wrapper .form .genero-container > div {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+main.wrapper .form input[type=radio] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid #166e74;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main.wrapper .form input[type=radio]:checked {
+  background-color: #d4eef0;
+}
+main.wrapper .form .submit-btn {
+  background-color: #61d1d9;
+  border: none;
+  padding: 5px 20px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  margin: auto;
+  display: block;
+}
+main.wrapper .form .formfield {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+main.wrapper .form .formfield .extra-info {
+  display: block;
+  font-size: 0.9rem;
+  color: #727272;
+  font-weight: 300;
+}
+main.wrapper .form .formfield label {
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: #166e74;
+  font-weight: 500;
+}
+main.wrapper .form .formfield.remember-me {
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+}
+main.wrapper .form.login-form {
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 35px;
+  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
+main.wrapper .form .form-controls + .submit-btn {
+  margin-top: 20px;
+}
+main.wrapper .form .form-controls img {
+  width: 30px;
+  cursor: pointer;
+}
+main.wrapper .form .form-controls img:hover {
+  background-color: #e8f2f3;
+  border-radius: 50%;
+}
+main.wrapper .form .register-group {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+main.wrapper .form .register-group textarea, main.wrapper .form .register-group input[type=email], main.wrapper .form .register-group input[type=password], main.wrapper .form .register-group input[type=text] {
+  padding: 10px 20px;
+}
+main.wrapper .form .register-group .fieldgroup-title {
+  font-size: 1.8rem;
+  color: #166e74;
+  font-weight: 600;
+  font-family: "Dosis";
+}
+main.wrapper .form .register-group .formfield {
+  margin-bottom: 30px;
+}
+main.wrapper .form .register-group .formfield label {
+  margin-left: 0;
+}
+main.wrapper .form .register-group#group-2, main.wrapper .form .register-group#group-3 {
+  display: none;
+}
+main.wrapper .login-google {
+  margin-top: 30px;
+}
+main.wrapper .login-google p {
+  text-align: center;
+}
+main.wrapper .link-to-registro {
+  color: #166e74;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
+  background: #d4eef0;
+  padding: 1px 30px;
+  width: fit-content;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
+main.wrapper .link-to-registro a {
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  main.wrapper {
+    top: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
