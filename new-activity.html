@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konnect. | Registro</title>
+    <title>Konnect. | Nueva actividad</title>
     <link href="./assets/css/style.css" rel="stylesheet">
     <script src="./assets/js/script.js"></script>
 </head>
@@ -26,28 +26,33 @@
 
     <main class="wrapper">
             <section class="page-heading">
-                <h1>Registro.</h1>
-                <p class="page-subtitle">¿A qué esperas para unirte a Konnect?</p>
+                <h1>Crea una nueva actividad.</h1>
+                <p class="page-subtitle">Así otros usuarios podrán unirse a tu plan</p>
             </section>
-        
+
+
             <section class="form register-form">
                 <form>
                     <article class="register-group" id="group-1">
                         <p class="fieldgroup-title">
-                            ¡Empecemos!</p>
+                            ¡Cuentanos tu plan!</p>
                         <div class="formfield">
-                            <label>Elige un nombre de usuario
-                                <span class="extra-info">Será el nombre por el que te conocerán el resto de usuarios</span></label>
+                            <label>Elige un título para la actividad</label>
                             <input type="text">
                         </div>
                         <div class="formfield">
-                            <label>Introduce tu email</label>
-                            <input type="email">
+                            <label>Describe un poco más en qué consiste la actividad</label>
+                            <textarea rows="3"></textarea>
                         </div>
                         <div class="formfield">
-                            <label>Elige una contraseña</label>
-                            <input type="password">
-                        </div>
+                            <label>¿A qué categoria pertenece?</label>
+                            <div class="select-wrapper">
+                                <select class="combo-pronvincia">
+                                <option value="Exposiciones">Exposiciones</option>
+                                <option value="Ocio">Ocio</option>
+                                <option value="Deporte">Deporte</option>
+                            </select>
+                        </div>                        </div>
                         <div class="form-controls">
                             <img class="step-btn" name="next" src="./assets/img/next.svg"/>
                         </div>
@@ -55,25 +60,15 @@
 
                     <article class="register-group" id="group-2">
                         <p class="fieldgroup-title">
-                            Cuentanos un poco más sobre ti</p>
-                            <div class="formfield">
-                                <label>Tu nombre</label>
-                                <input type="text">
-                            </div>
+                            Danos más datos sobre la actividad</p>
+                            
                         <div class="formfield">
-                            <label>¿Cual es tu fecha de nacimiento?</label>
+                            <label>Fecha de la actividad</label>
                             <input type="date">
                         </div>
-                        <div class="formfield genero-container">
-                            <label>¿Con qué género te identificas?</label>
-                            <div><div><input type="radio" name="genero" id="Mujer" value="Mujer"><span>Mujer</span></div>
-                            <div><input type="radio" name="genero" id="Hombre" value="Hombre"><span>Hombre</span></div>
-                            <div><input type="radio" name="genero" id="Otro" value="Otro"><span>Otro</span></div>
-                            </div>
-                        </div>
+                       
                         <div class="formfield">
-                            <label>Selecciona dónde te encuentras
-                                <span class="extra-info">Así podrás conectar con gente que esté cerca de tí.</span></label>
+                            <label>Ubicación de la actividad</label>
                             <div class="select-wrapper">
                                 <select class="combo-pronvincia">
                                 <option value="Albacete">Albacete</option>
@@ -83,31 +78,28 @@
                             </select>
                         </div>
                         </div>
+                        <div class="formfield">
+                            <label>Lugar donde tendrá lugar</label>
+                            <input type="text">
+                        </div>
+                        <div class="formfield">
+                            <label>¿Hay límite de asistentes?</label>
+                            <input type="number">
+                        </div>
+                        </div>
                         <div class="form-controls">
                             <img class="step-btn" name="prev" src="./assets/img/prev.svg"/>
-                            <img class="step-btn" name="next" src="./assets/img/next.svg"/>
                         </div>
+                        <input type="submit" class="submit-btn" value="Crear actividad">
+
                     </article>
 
-                    <article class="register-group" id="group-3">
-                <p class="fieldgroup-title">
-               Es hora de que te presentes</p>
-                        <div class="formfield">
-                            <label>Escribe una pequeña bio para que otros usuarios puedan leerla</label>
-                            <textarea rows="5"></textarea>
-                        </div>
-                        <div class="form-controls">
-                            <img class="step-btn" name="prev" src="./assets/img/prev.svg"/>
-                        </div>
-                        <input type="submit" class="submit-btn" value="Registrate">
-                    
-                    </article>
+              
                 </form>
            </section>
     
-       
 
-    </main>
+        </main>
 
-</body>
-</html>
+    </body>
+    </html>

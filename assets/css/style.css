@@ -43,13 +43,14 @@ header .main-menu {
   font-family: "Dosis";
 }
 header .main-menu .new-activity {
-  background-color: rgba(97, 209, 217, 0.3019607843);
+  background-color: #cff1f4;
 }
 header .main-menu li .menu-title {
   font-size: 1.2rem;
 }
 header .main-menu li.login {
   background-color: black;
+  justify-content: flex-start;
   color: white;
 }
 header .main-menu li.menu-btn {
@@ -131,15 +132,18 @@ main.wrapper .page-heading .page-subtitle {
 main.wrapper .form * {
   font-family: "Raleway";
 }
-main.wrapper .form textarea, main.wrapper .form input[type=email], main.wrapper .form input[type=password], main.wrapper .form input[type=text], main.wrapper .form input[type=date] {
+main.wrapper .form textarea, main.wrapper .form input[type=email], main.wrapper .form input[type=number], main.wrapper .form input[type=password], main.wrapper .form input[type=text], main.wrapper .form input[type=date] {
   padding: 5px 20px;
   border-radius: 20px;
   border: none;
   background-color: #e8f2f3;
   font-size: 1.2rem;
 }
-main.wrapper .form textarea:focus-visible, main.wrapper .form input[type=email]:focus-visible, main.wrapper .form input[type=password]:focus-visible, main.wrapper .form input[type=text]:focus-visible, main.wrapper .form input[type=date]:focus-visible {
+main.wrapper .form textarea:focus-visible, main.wrapper .form input[type=email]:focus-visible, main.wrapper .form input[type=number]:focus-visible, main.wrapper .form input[type=password]:focus-visible, main.wrapper .form input[type=text]:focus-visible, main.wrapper .form input[type=date]:focus-visible {
   outline-color: #d4eef0;
+}
+main.wrapper .form textarea:disabled, main.wrapper .form input[type=email]:disabled, main.wrapper .form input[type=number]:disabled, main.wrapper .form input[type=password]:disabled, main.wrapper .form input[type=text]:disabled, main.wrapper .form input[type=date]:disabled {
+  background-color: #c0d2d4;
 }
 main.wrapper .form .select-wrapper {
   position: relative;
@@ -177,7 +181,7 @@ main.wrapper .form input[type=radio] {
   margin: 0;
   width: 1.15em;
   height: 1.15em;
-  border: 1px solid #166e74;
+  border: 1px solid #2786a3;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -192,11 +196,12 @@ main.wrapper .form .submit-btn {
   border-radius: 20px;
   margin: auto;
   display: block;
+  cursor: pointer;
 }
 main.wrapper .form .formfield {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 main.wrapper .form .formfield .extra-info {
   display: block;
@@ -207,13 +212,12 @@ main.wrapper .form .formfield .extra-info {
 main.wrapper .form .formfield label {
   margin-bottom: 5px;
   margin-left: 20px;
-  color: #166e74;
+  color: #2786a3;
   font-weight: 500;
 }
 main.wrapper .form .formfield.remember-me {
   flex-direction: row;
   column-gap: 10px;
-  justify-content: center;
 }
 main.wrapper .form.login-form {
   max-width: 500px;
@@ -222,6 +226,21 @@ main.wrapper .form.login-form {
   padding: 35px;
   box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
+}
+main.wrapper .form.login-form .back-to-login {
+  color: #727272;
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: flex;
+  column-gap: 6px;
+}
+main.wrapper .form.login-form .back-icon {
+  width: 20px;
+}
+main.wrapper .form.login-form .forgot-password-link a {
+  font-style: italic;
+  color: #727272;
+  font-weight: 300;
 }
 main.wrapper .form .form-controls + .submit-btn {
   margin-top: 20px;
@@ -239,12 +258,13 @@ main.wrapper .form .register-group {
   margin: auto;
   text-align: center;
 }
-main.wrapper .form .register-group textarea, main.wrapper .form .register-group input[type=email], main.wrapper .form .register-group input[type=password], main.wrapper .form .register-group input[type=text] {
+main.wrapper .form .register-group textarea, main.wrapper .form .register-group input[type=email], main.wrapper .form .register-group input[type=password],
+main.wrapper .form .register-group input[type=text] {
   padding: 10px 20px;
 }
 main.wrapper .form .register-group .fieldgroup-title {
   font-size: 1.8rem;
-  color: #166e74;
+  color: #2786a3;
   font-weight: 600;
   font-family: "Dosis";
 }
@@ -264,7 +284,7 @@ main.wrapper .login-google p {
   text-align: center;
 }
 main.wrapper .link-to-registro {
-  color: #166e74;
+  color: #2786a3;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 30px;
@@ -278,8 +298,217 @@ main.wrapper .link-to-registro {
 main.wrapper .link-to-registro a {
   font-weight: 600;
 }
+main.wrapper .listing-container {
+  display: flex;
+  column-gap: 3%;
+}
+main.wrapper .listing-filters {
+  width: 22%;
+  display: inline-block;
+}
+main.wrapper .listing-filters .title {
+  color: #2786a3;
+  font-size: 1.2rem;
+  font-family: "Dosis";
+  margin-bottom: 3px;
+}
+main.wrapper .listing-filters label {
+  font-size: 0.9rem;
+}
+main.wrapper .listing-filters input[type=checkbox] {
+  display: none;
+}
+main.wrapper .listing-filters input[type=checkbox] + span {
+  display: flex;
+  column-gap: 5px;
+}
+main.wrapper .listing-filters input[type=checkbox] + span:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+main.wrapper .listing-filters input[type=checkbox]:checked + span {
+  font-weight: 500;
+}
+main.wrapper .listing-filters input[type=checkbox]:checked + span:before {
+  background-color: #61d1d9;
+}
+main.wrapper .listing-filters input[type=date] {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e8f2f3;
+  font-weight: 300;
+}
+main.wrapper .listing-filters input[type=date]:focus-visible {
+  outline-color: #d4eef0;
+}
+main.wrapper .listing-filters article:not(:last-child) {
+  border-bottom: 1px solid #d4eef0;
+  padding-bottom: 20px;
+}
+main.wrapper .plans-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  column-gap: 30px;
+}
+main.wrapper .plans-selector div {
+  cursor: pointer;
+}
+main.wrapper .plans-selector .activo {
+  font-weight: 600;
+  color: #61d1d9;
+}
+main.wrapper .activities-section.activities-listing {
+  width: 75%;
+  display: inline-block;
+}
+main.wrapper .activities-section.activities-listing article {
+  margin-bottom: 30px;
+}
+main.wrapper .activities-section.activities-plans {
+  width: 70%;
+  margin: auto;
+}
+main.wrapper .activities-section .activities-item {
+  background-color: #e8f2f3;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+main.wrapper .activities-section .row {
+  display: flex;
+  column-gap: 20px;
+  position: relative;
+}
+main.wrapper .activities-section .row.ends {
+  justify-content: space-between;
+}
+main.wrapper .activities-section .activity-data {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+main.wrapper .activities-section .category {
+  background-color: #2786a3;
+  width: fit-content;
+  padding: 5px 10px;
+  justify-content: flex-start;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+main.wrapper .activities-section .icon {
+  width: 25px;
+}
+main.wrapper .activities-section h1.title, main.wrapper .activities-section h2.title {
+  font-size: 2rem;
+  font-family: "Dosis";
+  font-weight: 400;
+  margin-top: 0;
+  line-height: 2rem;
+}
+main.wrapper .activities-section * {
+  margin: 0;
+}
+main.wrapper .activities-section .signup {
+  color: #2786a3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 5px;
+}
+main.wrapper .activities-section .signup span {
+  font-weight: 600;
+}
+main.wrapper .activities-section .signup .icon {
+  width: 16px;
+  margin-right: 2px;
+}
+main.wrapper .activities-section .interested {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+}
+main.wrapper .activities-section .interested .interested-btn {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/fav-0.svg");
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main.wrapper .activities-section .interested .interested-btn.active {
+  background-image: url("../img/fav-1.svg");
+}
+main.wrapper .activities-section.activity-detail {
+  background-color: #e0f1f3;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+main.wrapper .activities-section.activity-detail .place {
+  font-weight: 300;
+}
+main.wrapper .activities-section.activity-detail .singup-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  border: #2786a3 2px solid;
+  padding: 7px 10px;
+  color: #2786a3;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+main.wrapper .activities-section.activity-detail .singup-btn:hover {
+  background-color: #2786a3;
+  color: white;
+  cursor: pointer;
+}
 @media (max-width: 767px) {
-  main.wrapper {
+  main.wrapper .activities-section {
     top: 40px;
   }
+}
+main.wrapper .profile-field {
+  display: flex;
+  row-gap: 20px;
+  column-gap: 5px;
+  font-weight: 300;
+}
+main.wrapper .profile-field:not(:last-child) {
+  margin-bottom: 5px;
+}
+main.wrapper .profile-field p {
+  margin: 0;
+  font-weight: 500;
+}
+main.wrapper .public-profile {
+  display: none;
+  z-index: 80000;
+  position: absolute;
+  background-color: white;
+  top: 34px;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1411764706);
+}
+main.wrapper .user-profile:hover .public-profile {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
